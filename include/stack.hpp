@@ -60,11 +60,11 @@ class Stack {
   }
 
   ~Stack() {
-      while (_head) {
-        auto helper = _head;
-        _head = _head->next;
-        delete helper;
-      }
+    while (_head) {
+      auto helper = _head;
+      _head = _head->next;
+      delete helper;
+    }
   }
 };
 

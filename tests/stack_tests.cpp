@@ -2,13 +2,12 @@
 
 #include <gtest/gtest.h>
 
-#include "stack.hpp"
-#include "stack_args.hpp"
-
-#include <stdexcept>
 #include <memory>
+#include <stdexcept>
 #include <type_traits>
 
+#include "stack.hpp"
+#include "stack_args.hpp"
 
 TEST(Stack, test1) {
   Stack<int> stack;

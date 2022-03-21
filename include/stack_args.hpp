@@ -19,7 +19,9 @@ class StackArgs {
 
  public:
   StackArgs() : _head(nullptr) {}
-  explicit StackArgs(T&& val) noexcept { _head = new StackArgs_body(val, nullptr); }
+  explicit StackArgs(T&& val) noexcept {
+    _head = new StackArgs_body(val, nullptr);
+  }
 
   StackArgs(const StackArgs& st) = delete;
   StackArgs(StackArgs&& st) noexcept : _head(st._head) { st._head = nullptr; }
@@ -34,8 +36,8 @@ class StackArgs {
     _head = _new;
   }
 
-  template <typename ...Args>
-  void push_emplace(Args&& ...args) {
+  template <typename... Args>
+  void push_emplace(Args&&... args) {
     auto _new = new StackArgs_body{{std::forward<Args>(args)...}, _head};
     _head = _new;
   }
