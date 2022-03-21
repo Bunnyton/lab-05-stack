@@ -32,7 +32,7 @@ class StackArgs {
   }
 
   void push(const T& value) {
-    auto _new = new StackArgs_body(value, _head);
+    auto _new = new StackArgs_body{value, _head};
     _head = _new;
   }
 

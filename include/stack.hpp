@@ -29,7 +29,7 @@ class Stack {
   }
 
   void push(const T& value) {
-    auto _new = new Stack_body(value, _head);
+    auto _new = new Stack_body{value, _head};
     _head = _new;
   }
 
