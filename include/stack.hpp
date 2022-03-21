@@ -1,9 +1,10 @@
 // Copyright 2021 Your Name <your_email>
 
-#ifndef LAB_05_STACK_STACK_HPP
-#define LAB_05_STACK_STACK_HPP
+#ifndef LAB_05_STACK_STACK_HPP_
+#define LAB_05_STACK_STACK_HPP_
 
 #include <iostream>
+#include <utility>
 
 template <typename T>
 class Stack {
@@ -68,4 +69,4 @@ class Stack {
   }
 };
 
-#endif  // LAB_05_STACK_STACK_HPP
+#endif  // LAB_05_STACK_STACK_HPP_
